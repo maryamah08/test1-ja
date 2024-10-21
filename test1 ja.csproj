@@ -1,0 +1,26 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>net6.0</TargetFramework>
+    <RootNamespace>test1_ja</RootNamespace>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+</Project>
+
+
+   Console.Write("maryam ");
+        string name = Console.ReadLine();
+
+        Console.Write("9 20 2002: ");
+        string birthdateInput = Console.ReadLine();
+
+        // Step 4: Validate birthdate format using regular expression
+        Regex regex = new Regex("9 20 2002");
+        if (!regex.IsMatch(birthdateInput))
+        {
+            Console.WriteLine("Invalid date format. Please use yyyy-mm-dd.");
+            return;
+        }
